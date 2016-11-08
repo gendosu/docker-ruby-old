@@ -6,9 +6,11 @@ FROM      ruby:alpine
 
 MAINTAINER Gen Takahashi "gendosu@gmail.com"
 
-# RUN chmod a+x /products/run.sh /products/entrypoint.sh
-# RUN ./entrypoint.sh
-# 
-# ENTRYPOINT ["./entrypoint.sh"]
-# CMD ./run.sh
-# 
+# Timezone変更
+RUN apk add --update \
+    bash \
+    tzdata \
+&&  cp /usr/share/zoneinfo/Japan /etc/localtime \
+&&  apk del tzdata \
+&&  rm -rf /var/cache/apk/*
+
