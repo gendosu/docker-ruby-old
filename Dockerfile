@@ -20,6 +20,8 @@ RUN echo "ja_JP.UTF-8 UTF-8" > /etc/locale.gen \
 &&  update-locale LANG=ja_JP.UTF-8
 
 # Timezone変更
-RUN echo "Asia/Tokyo" > /etc/timezone \
+
+RUN if [ -e /etc/localtime ]; then rm /etc/localtime; fi \
+&&  ln -s /usr/share/zoneinfo/Asia/Tokyo /etc/localtime \
 &&  dpkg-reconfigure -f noninteractive tzdata
 
