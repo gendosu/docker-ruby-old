@@ -6,6 +6,8 @@ FROM      ruby:alpine
 
 MAINTAINER Gen Takahashi "gendosu@gmail.com"
 
+ENV LANG=ja_JP.UTF-8
+
 # Timezone変更
 RUN apk add --update \
     bash \
