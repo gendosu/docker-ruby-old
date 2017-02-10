@@ -6,7 +6,11 @@ FROM      ruby:2.1.2
 
 MAINTAINER Gen Takahashi "gendosu@gmail.com"
 
-RUN apt-get update \
+RUN apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 9D6D8F6BC857C906 \
+&&  apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 7638D0442B90D010 \
+&&  apt-key adv --recv-keys --keyserver keyserver.ubuntu.com CBF8D6FD518E17E1 \
+
+&&  apt-get update \
 &&  apt-get install -y --force-yes \
     locales \
 &&  apt-get clean \
