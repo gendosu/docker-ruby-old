@@ -2,7 +2,7 @@
 #
 # VERSION               0.0.1
 
-FROM      ruby:alpine
+FROM      ruby:2.2.9-alpine
 
 MAINTAINER Gen Takahashi "gendosu@gmail.com"
 
