@@ -8,6 +8,7 @@ change TimeZone by `Asia/Tokyo`
 
 * `latest`, `alpine` [(Dockerfile)](https://github.com/gendosu/docker-ruby)
 * `2`, `2-alpine` [(Dockerfile)](https://github.com/gendosu/docker-ruby/blob/2)
+* `2.6.0`, `2.6.0-alpine` [(Dockerfile)](https://github.com/gendosu/docker-ruby/blob/2.6.0)
 * `2.5`, `2.5-alpine` [(Dockerfile)](https://github.com/gendosu/docker-ruby/blob/2.5)
 * `2.5.3`, `2.5.3-alpine` [(Dockerfile)](https://github.com/gendosu/docker-ruby/blob/2.5.3)
 * `2.5.1`, `2.5.1-alpine` [(Dockerfile)](https://github.com/gendosu/docker-ruby/blob/2.5.1)
