@@ -1,6 +1,4 @@
-# FROM buildpack-deps:stretch
-FROM ubuntu:14.04.5
-# FROM gentest04
+FROM buildpack-deps:jessie
 
 # skip installing gem documentation
 RUN set -eux; \
@@ -88,7 +86,8 @@ RUN set -eux; \
 		| sort -u \
 		| xargs -r apt-mark manual \
 	; \
-	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; \
+	export SUDO_FORCE_REMOVE=yes; \
+        apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; \
 	\
 	cd /; \
 	rm -r /usr/src/ruby; \
