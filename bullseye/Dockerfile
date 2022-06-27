@@ -20,10 +20,32 @@ RUN set -eux; \
 	savedAptMark="$(apt-mark showmanual)"; \
 	apt-get update; \
 	apt-get install -y --no-install-recommends \
+		default-mysql-client \
+		build-essential \
+		vim \
+		git \
+		curl \
+		less \
+		xvfb \
+		ffmpeg \
+		poppler-utils \
+		graphviz \
+		qtbase5-dev \
+		libqt5webkit5-dev \
+		gstreamer1.0-plugins-base \
+		gstreamer1.0-tools \
+		gstreamer1.0-x \
+		libprotobuf-dev \
+		libprotoc-dev \
+		protobuf-compiler \
 		bison \
 		dpkg-dev \
 		libgdbm-dev \
+		pkg-config \
+		libxml2-dev \
+		libcurl4-openssl-dev \
 		ruby \
+		&& \
 	; \
 	rm -rf /var/lib/apt/lists/*; \
 	\
